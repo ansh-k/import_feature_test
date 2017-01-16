@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row col-sm-12 col-md-12 mt-5">
+    <h2 class="mr-auto">Import Product</h2>
+  </div>
+  <div class="row">
+    <main class="col-sm-12 col-md-12">
+      <%= form_for @request, { url: import_imports_path , class: 'form-inline mt-2 mt-md-0' , multipart: true } do |f| %>
+        <%= f.file_field :import_file %>
+        <%= f.submit "Import" %>
+      <% end %>
+    </main>
+  </div>
+</div>
