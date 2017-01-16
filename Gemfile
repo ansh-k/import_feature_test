@@ -62,3 +62,10 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
+# to read import files 
+gem 'roo', '~> 2.5.0'
+gem 'sidekiq'
+
+# to upload files
+gem 'carrierwave', '~> 1.0'
+gem 'activerecord-import'
