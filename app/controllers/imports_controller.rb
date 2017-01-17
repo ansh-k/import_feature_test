@@ -18,11 +18,16 @@ class ImportsController < ApplicationController
 
 	def import
 		@request = ImportRequest.new(import_request_params)
+		if @request.save
+			redirect_to imports_path
+		else
+			render :action => params[:request_from]
+		end
 	end
 
 	private
 
 	def import_request_params
-		params.require(:import_request).permit(:import_file)
+		params.require(:import_request).permit(:import_file, :import_for, :extract_time)
 	end
 end

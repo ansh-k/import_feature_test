@@ -21,8 +21,8 @@ $(function () {
             table.append(row);
           }
 
-          container = document.getElementById('example'),
-          $("#example").html("")
+          container = document.getElementById('import_file_rows'),
+          $("#import_file_rows").html("")
           hot = new Handsontable(container, {
             data: data,
             minSpareRows: 1,
